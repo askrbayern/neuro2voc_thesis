@@ -5,22 +5,47 @@ Author can be contacted at fei.gao@uzh.ch
 
 Note: each experiment uses its own data, except CEBRA and VAE
 
-Note: the codes are usually ordered, starting from 1.
+Note: the codes are usually ordered, starting from 1. They should be executed in order. Only the last code in each folder is the model.
 
-#### 1_ML
+### 1_ML
 
-Codes: 
+1. Extract different features
+2. Experiment 1: Basic ML
+3. Experiment 2: Information integration
 
-#### 2_NLP
+### 2_NLP
 
-#### 3_DL
+1. Extract data of interest
+2. Use these data, create tensors
+3. Create data from tensors
+4. Train tokenizer based on text data
+5. Train the model
 
-#### 4_CEBRA
+### 3_DL
 
-#### 5_VAE
+1. Extract tensor data
+2. Concatenate the data from the tensor
+3. Slice the tensors to prepare for the time series DL models
+4. Batch processing
 
-Codes:
+### 4_CEBRA
 
-- neural 1d VAE
-- vocal 2d VAE
-- joint VAE
+1. CEBRA-neuro2voc
+
+### 5_VAE
+
+1. clean the raw neural data, convert the spikes back to 30kHz or other Hz you want
+2. use the above result, create training datasets
+3. pass data into the models, train, and visualize
+
+#### NeuralEnCodec
+
+1. data
+   1. dataAOI: data Area Of Interest, which means we only extract data from vocalization periods
+   2. dataNotAOI: we take all data
+2. model
+   1. encAOI_binary: for binary data
+   2. encAOI_binned: for binned data
+3. visualize
+   1. encAOI_visualize_binary
+   2. encAOI_visualize_binned
