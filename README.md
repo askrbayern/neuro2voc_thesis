@@ -39,6 +39,7 @@ Note: the codes are usually ordered, starting from 1. They should be executed in
 3. pass data into the models, train, and visualize
 
 #### NeuralEnCodec
+It is modified from https://github.com/marisbasha/neural_encodec
 
 1. data
    1. dataAOI: data Area Of Interest, which means we only extract data from vocalization periods
